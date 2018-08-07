@@ -1,0 +1,23 @@
+﻿{
+	"name": "IdleInfinity扩展",
+	"version": "1.0",
+	"description": "自动刷秘境（只打BOSS），同时支持秘境类型的物品（刷全图）",
+	"manifest_version": 2,
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	"icons": 
+	{ 
+		"16": "icon.png",             
+		"48": "icon.png",            
+		"128": "icon.png" 
+	}, 
+	"permissions": ["https://www.idleinfinity.cn/*"],
+	"content_scripts": [
+		{
+			"matches": ["https://www.idleinfinity.cn/*"],      
+			"js": ["startScript.js"]
+		}
+	],
+	"web_accessible_resources":["game.js"]
+}
